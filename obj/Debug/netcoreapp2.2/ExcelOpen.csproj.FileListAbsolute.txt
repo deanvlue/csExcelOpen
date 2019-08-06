@@ -1,0 +1,11 @@
+E:\dev\csharp\ExcelOpen\bin\Debug\netcoreapp2.2\ExcelOpen.deps.json
+E:\dev\csharp\ExcelOpen\bin\Debug\netcoreapp2.2\ExcelOpen.runtimeconfig.json
+E:\dev\csharp\ExcelOpen\bin\Debug\netcoreapp2.2\ExcelOpen.runtimeconfig.dev.json
+E:\dev\csharp\ExcelOpen\bin\Debug\netcoreapp2.2\ExcelOpen.dll
+E:\dev\csharp\ExcelOpen\bin\Debug\netcoreapp2.2\ExcelOpen.pdb
+E:\dev\csharp\ExcelOpen\obj\Debug\netcoreapp2.2\ExcelOpen.csprojAssemblyReference.cache
+E:\dev\csharp\ExcelOpen\obj\Debug\netcoreapp2.2\ExcelOpen.csproj.CoreCompileInputs.cache
+E:\dev\csharp\ExcelOpen\obj\Debug\netcoreapp2.2\ExcelOpen.AssemblyInfoInputs.cache
+E:\dev\csharp\ExcelOpen\obj\Debug\netcoreapp2.2\ExcelOpen.AssemblyInfo.cs
+E:\dev\csharp\ExcelOpen\obj\Debug\netcoreapp2.2\ExcelOpen.dll
+E:\dev\csharp\ExcelOpen\obj\Debug\netcoreapp2.2\ExcelOpen.pdb

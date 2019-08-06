@@ -1,0 +1,14 @@
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\hostpolicy.dll
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\hostfxr.dll
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\ExcelOpen.exe
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\ExcelOpen.deps.json
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\ExcelOpen.runtimeconfig.json
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\ExcelOpen.runtimeconfig.dev.json
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\ExcelOpen.dll
+E:\dev\csharp\ExcelOpen\bin\Release\netcoreapp2.2\win-x86\ExcelOpen.pdb
+E:\dev\csharp\ExcelOpen\obj\Release\netcoreapp2.2\win-x86\ExcelOpen.csprojAssemblyReference.cache
+E:\dev\csharp\ExcelOpen\obj\Release\netcoreapp2.2\win-x86\ExcelOpen.csproj.CoreCompileInputs.cache
+E:\dev\csharp\ExcelOpen\obj\Release\netcoreapp2.2\win-x86\ExcelOpen.AssemblyInfoInputs.cache
+E:\dev\csharp\ExcelOpen\obj\Release\netcoreapp2.2\win-x86\ExcelOpen.AssemblyInfo.cs
+E:\dev\csharp\ExcelOpen\obj\Release\netcoreapp2.2\win-x86\ExcelOpen.dll
+E:\dev\csharp\ExcelOpen\obj\Release\netcoreapp2.2\win-x86\ExcelOpen.pdb

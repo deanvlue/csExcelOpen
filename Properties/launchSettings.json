@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExcelOpen": {
+      "commandName": "Project",
+      "commandLineArgs": ".\\newbook.core.xlsx"
+    }
+  }
+}
