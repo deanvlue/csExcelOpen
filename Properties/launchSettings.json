@@ -2,7 +2,7 @@
   "profiles": {
     "ExcelOpen": {
       "commandName": "Project",
-      "commandLineArgs": ".\\newbook.core.xlsx"
+      "commandLineArgs": "E:\\dev\\csharp\\ExcelOpen\\test.xlsx"
     }
   }
 }

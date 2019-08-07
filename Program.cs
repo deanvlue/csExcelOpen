@@ -17,10 +17,11 @@ namespace ExcelOpen
         private static string GetNewFileName(string filename)
         {
             string dirName = Path.GetDirectoryName(filename);
-            string fileName = Path.GetFileName(filename);
             string fileExtension = Path.GetExtension(filename);
+            string newfileName = Path.GetFileNameWithoutExtension(filename) + "_mod" + fileExtension;
 
-            return dirName + fileName + "_mod" + fileExtension;
+            return Path.Join(dirName, newfileName);
+            //return dirName + fileName + "_mod" + fileExtension;
 
         }
         static void Main(string[] args)
@@ -43,21 +44,62 @@ namespace ExcelOpen
 
             //Console.WriteLine(_fileName);
             //Console.ReadLine();
-            //string newFile = GetNewFileName(_fileName);
+            string newFile = GetNewFileName(_fileName);
 
-
-            HSSFWorkbook hssfwb;
+            // determine filetype first
+            XSSFWorkbook hssfwb;
             using (FileStream excelFile = new FileStream(_fileName, FileMode.Open, FileAccess.Read))
             {
-                hssfwb = new HSSFWorkbook(excelFile);
+                hssfwb = new XSSFWorkbook(excelFile);
+                ISheet reporte = hssfwb.GetSheetAt(0);
+
+
+                using (FileStream newExcelFile = new FileStream(newFile, FileMode.Create, FileAccess.Write))
+                {
+                    IWorkbook newWorkBook = new XSSFWorkbook();
+                    //newWorkBook = new XSSFWorkbook(newExcelFile);
+                    ISheet nuevoReporte = newWorkBook.CreateSheet("REPORTE");
+                    IRow headerRow = nuevoReporte.CreateRow(0);
+
+                    // Creates Header Row
+                    headerRow.CreateCell(0).SetCellValue("DIA");
+                    headerRow.CreateCell(1).SetCellValue("ACUMULACIONES");
+                    headerRow.CreateCell(2).SetCellValue("REDENCIONES");
+                    headerRow.CreateCell(3).SetCellValue("ID_TIENDA");
+
+
+                    for (int row = 1; row <= reporte.LastRowNum; row++)
+                    {
+                        if (reporte.GetRow(row) != null) // row is when the row only conatains empty cells
+                        {
+                            //string fechaEvento = reporte.GetRow(row).GetCell(0).StringCellValue + "/2019";
+                            string[] fecha = reporte.GetRow(row).GetCell(0).StringCellValue.Split("/");
+
+                            uint idTienda;
+                            idTienda = Convert.ToUInt32(reporte.GetRow(row).GetCell(1).StringCellValue);
+
+                            //reporte.GetRow(row).GetCell(2).GetType();
+
+                            double acumulaciones = reporte.GetRow(row).GetCell(2).NumericCellValue;
+                            double redenciones = reporte.GetRow(row).GetCell(3).NumericCellValue;
+                            //Console.WriteLine("{0},{1},{2},{3}", fechaEvento, acumulaciones, redenciones, idTienda);
+
+                            IRow rowNewReport = nuevoReporte.CreateRow(row);
+                            //rowNewReport.CreateCell(0).SetCellValue(fechaEvento);
+                            var dateCell = rowNewReport.CreateCell(0);
+                                dateCell.SetCellType(CellType.Formula);
+                            dateCell.CellFormula = string.Format("DATE(2019,{1},{0})", fecha[0], fecha[1]);
+                                
+                            rowNewReport.CreateCell(1).SetCellValue(acumulaciones);
+                            rowNewReport.CreateCell(2).SetCellValue(redenciones);
+                            rowNewReport.CreateCell(3).SetCellValue(idTienda);
+                        }
+
+                    }
+                    Console.WriteLine("Escribiendo archivo...");
+                    newWorkBook.Write(newExcelFile);
+                }
             }
-
-            ISheet repote = hssfwb.GetSheetAt(0);
-            for (int row = 0; row ) 
-
-
-
-
 
 
 
